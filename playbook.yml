@@ -1,0 +1,10 @@
+---
+  - name: "zjv test playbook"
+    hosts: my_mac
+    tasks:
+
+    - name: "just execute ls -lrt"
+      shell: "ls -lrt"
+      register: "output"
+
+    - debug: var=output.stdout_lines
